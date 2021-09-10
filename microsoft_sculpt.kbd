@@ -17,18 +17,18 @@
   grv  1     2     3     4     5     6           7       8      9         0      -        =                bspc               home
   tab        q     w     e     r     t           bspc    y      u         i      o        p       del                   del   end
   lctl       a     s     d     f     g           ret     h      j         k      l        ;       '        ret          ins   pgup
-  lsft @ly1  z     x     c     v     @ly1        b       n      m         ,      .                         /            up    pgdn  
-  @ly1       lmet  lalt        spc   spc         @ly1    rctl                                                     left  down  rght
+  lsft @ly1  z     x     c     v     @ly1        b       n      m         ,      .                         @ly1         up    pgdn  
+  @ly1       lmet  lalt        spc   spc         ralt    rctl                                                     left  down  rght
 )
 
 
 ;; Navigation and special symbols layout
 (deflayer navigation
   esc  f1    f2    f3    f4    f5    f6          f7      f8     f9      f10      f11       f12
-  grv   \(    \)    [     ]     {       }         '       "     XX      XX        -         =               bspc                home
+  grv   \(    \)    [     ]     {       }         '       "     XX      XX        -         =               bspc               home
   tab        esc   1     2     3     lsft        lsft    home   pgdn    pgup     end       end    bspc                   del   end
   lctl       esc   4     5     6     lctl        lctl    left   down    up       right     ret    ret      ret           ins   pgup
-  lsft  _    0     7     8     9     _           lalt    ;      '       ,        .                         /             up    pgdn  
+  lsft  _    0     7     8     9     _           .       ;      ,       '        /                         _             up    pgdn  
   _          lmet  lalt        spc   spc         _       rctl                                                      left  down  rght
 )
 
