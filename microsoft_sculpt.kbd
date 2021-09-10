@@ -1,44 +1,70 @@
 (defcfg
   input  (device-file "/dev/input/by-id/usb-Microsoft_Microsoft®_2.4GHz_Transceiver_v9.0-event-kbd")
   output (uinput-sink "kmonad_output_kb")
-  fallthrough true
 )
 
 ( defalias
-  ly1 (layer-toggle navigation)
-  ly2 (layer-toggle initial)
+  nav (layer-toggle navigation)
+  sym (layer-toggle symbols)
+  pun (layer-toggle punctuation)
+  num (layer-toggle numbers)
 )
 
 ;; Default layer: qwerty, shifted to one position to the right
-;; Home positions for the right hand fingers are weird for most of people: hjkl 
-;; Though it is more effective layout than the default qwerty
+;; Home positions: HJKL . More effective than normal QWERTY 
+;; Right indicative finger can pres RET and BSPC
 (deflayer initial
-  esc  f1    f2    f3    f4    f5    f6          f7     f8     f9       f10      f11      f12        
-  grv  1     2     3     4     5     6           7       8      9         0      -        =                bspc               home
-  tab        q     w     e     r     t           bspc    y      u         i      o        p       del                   del   end
-  lctl       a     s     d     f     g           ret     h      j         k      l        ;       '        ret          ins   pgup
-  lsft @ly1  z     x     c     v     @ly1        b       n      m         ,      .                         @ly1         up    pgdn  
-  @ly1       lmet  lalt        spc   spc         ralt    rctl                                                     left  down  rght
+  esc  f1   f2   f3   f4   f5   f6        f7   f8   f9   f10  f11  f12                                
+  grv  1    2    3    4    5    6         7    8    9    0    -    =         bspc                home
+  tab       q    w    e    r    t         bspc y    u    i    o    p    del                 del  end
+  lctl      a    s    d    f    g         ret  h    j    k    l    ;    '    ret            ins  pgup
+  lsft @num z    x    c    v    @nav      b    n    m    @pun @sym           rsft           up   pgdn  
+  @num      lmet lalt      spc  spc       ralt rctl                                    left down rght
 )
 
 
-;; Navigation and special symbols layout
 (deflayer navigation
-  esc  f1    f2    f3    f4    f5    f6          f7      f8     f9      f10      f11       f12
-  grv   \(    \)    [     ]     {       }         '       "     XX      XX        -         =               bspc               home
-  tab        esc   1     2     3     lsft        lsft    home   pgdn    pgup     end       end    bspc                   del   end
-  lctl       esc   4     5     6     lctl        lctl    left   down    up       right     ret    ret      ret           ins   pgup
-  lsft  _    0     7     8     9     _           .       ;      ,       '        /                         _             up    pgdn  
-  _          lmet  lalt        spc   spc         _       rctl                                                      left  down  rght
+  esc  f1   f2   f3   f4   f5   f6        f7   f8   f9   f10  f11   f12                            
+  XX   XX   XX   XX   XX   XX   XX        XX   XX   XX   XX   XX    XX       XX                  XX  
+  XX        esc  XX   XX   XX   lsft      bspc home pgdn pgup end   XX  XX                  XX   XX 
+  XX        XX   XX   XX   XX   lctl      ret  left down up   right XX  XX   XX             XX   XX  
+  XX   XX   XX   XX   XX   XX   @nav      lalt XX   XX   XX   XX             XX             XX   XX    
+  XX        XX   XX        XX   XX        XX   XX                                      XX   XX   XX  
+)
+
+(deflayer numbers
+  esc  f1   f2   f3   f4   f5   f6        f7   f8   f9   f10  f11  f12                             
+  XX   XX   XX   XX   XX   XX   XX        XX   XX   XX   XX   XX   XX        XX                  XX  
+  XX        esc  XX   XX   XX   lsft      bspc 1    2    3    XX   XX   XX                  XX   XX 
+  XX        XX   XX   XX   XX   lctl      ret  4    5    6    XX   XX   XX   XX             XX   XX  
+  XX   @num XX   XX   XX   XX   XX        lalt 7    8    9    0              XX             XX   XX    
+  @num      XX   XX        XX   XX        XX   XX                                      XX   XX   XX  
+)
+
+(deflayer symbols
+  esc  f1   f2   f3   f4   f5   f6        f7   f8   f9   f10  f11  f12                             
+  XX   XX   XX   XX   XX   XX   XX        XX   XX   XX   XX   XX   XX        XX                  XX  
+  XX        esc  !    @    #    lsft      bspc [    ]    XX   XX   XX   XX                  XX   XX 
+  XX        XX   $    %    ^    lctl      ret  \(   \)   XX   XX   XX   XX   XX             XX   XX  
+  XX   XX   XX   &    *    <    >         lalt {    }    XX   @sym           XX             XX   XX    
+  XX        XX   XX        XX   XX        XX   XX                                      XX   XX   XX  
+)
+
+(deflayer punctuation
+  esc  f1   f2   f3   f4   f5   f6        f7   f8   f9   f10  f11  f12                                 
+  XX   XX   XX   XX   XX   XX   XX        XX   XX   XX   XX   XX   XX        XX                  XX  
+  XX        esc  XX   /    \    lsft      bspc XX   XX   XX   XX   XX   XX                  XX   XX 
+  XX        -    "    ,    .    lctl      ret  XX   XX   XX   XX   XX   XX   XX             XX   XX  
+  XX   XX   \_   '    :    ;    XX        lalt XX   XX   @pun XX             XX             XX   XX    
+  XX        XX   XX        XX   XX        XX   XX                                      XX   XX   XX  
 )
 
 ;; Underliying source. It is a very comfortable ergonomic keyboard, Microsoft sculpt.
 (defsrc
-  esc  f1    f2   f3     f4   f5     f6          f7    f8     f9        f10     f11      f12                                      
-  grv  1     2    3      4    5      6           7     8      9         0       -        =                 bspc                home
-  tab        q    w      e    r      t           y     u      i         o       p        [        ]                      del   end
-  caps       a    s      d    f      g           h     j      k         l       ;        '        \        ret           ins   pgup
-  lsft 102d  z    x      c    v      b           n     m      ,         .       /                          rsft          up    pgdn  
-  lctl       lmet lalt       spc      spc        ralt     rctl                                                     left  down  rght
+  esc  f1   f2   f3   f4   f5   f6        f7   f8   f9   f10  f11  f12                               
+  grv  1    2    3    4    5    6         7    8    9    0    -    =         bspc                home
+  tab       q    w    e    r    t         y    u    i    o    p    [    ]                   del  end
+  caps      a    s    d    f    g         h    j    k    l    ;    '    \    ret            ins  pgup
+  lsft 102d z    x    c    v    b         n    m    ,    .    /              rsft           up   pgdn  
+  lctl      lmet lalt      spc  spc       ralt rctl                                    left down rght
 )
-
