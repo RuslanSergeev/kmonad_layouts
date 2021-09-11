@@ -15,9 +15,9 @@
 ;; Right indicative finger can pres RET and BSPC
 (deflayer initial
   esc  f1   f2   f3   f4   f5   f6        f7   f8   f9   f10  f11  f12                                
-  grv  1    2    3    4    5    6         7    8    9    0    -    =         XX                  home
+  grv  1    2    3    4    5    6         7    8    9    0    -    =         bspc                home
   tab       q    w    e    r    t         bspc y    u    i    o    p    del                 del  end
-  lctl      a    s    d    f    g         ret  h    j    k    l    lsft XX   XX             ins  pgup
+  lctl      a    s    d    f    g         ret  h    j    k    l    rsft XX   ret            ins  pgup
   @num lsft z    x    c    v    @nav      b    n    m    @pun @sym           rsft           up   pgdn  
   @num      lmet lalt      spc  spc       ralt rctl                                    left down rght
 )
@@ -25,40 +25,40 @@
 
 (deflayer navigation
   esc  f1   f2   f3   f4   f5   f6        f7   f8   f9   f10  f11  f12                             
-  XX   XX   XX   XX   XX   XX   XX        XX   XX   XX   XX   XX   XX        XX                  XX  
-  XX        esc  XX   XX   XX   lsft      bspc home pgdn pgup end  XX   del                 XX   XX 
-  XX        XX   XX   XX   XX   lctl      ret  left down up   rght lsft XX   XX             XX   XX  
-  XX   lsft XX   XX   XX   XX   @nav      lalt XX   XX   XX   XX             XX             XX   XX    
-  XX        XX   XX        XX   XX        XX   XX                                      XX   XX   XX  
+  XX   XX   XX   XX   XX   XX   XX        XX   XX   XX   XX   XX   XX        bspc                XX  
+  XX        esc  XX   XX   XX   lsft      rsft home pgdn pgup end  XX   del                 XX   XX 
+  XX        XX   XX   XX   XX   lctl      rctl left down up   rght rsft XX   ret            XX   XX  
+  @num lsft XX   XX   XX   XX   @nav      ralt XX   XX   @pun @sym           XX             XX   XX    
+  @num      lmet lalt      spc  spc       ralt rctl                                    XX   XX   XX  
 )
 
 (deflayer numbers
   esc  f1   f2   f3   f4   f5   f6        f7   f8   f9   f10  f11  f12                             
-  XX   XX   XX   XX   XX   XX   XX        XX   XX   XX   XX   XX   XX        XX                  XX  
-  XX        1    2    3    XX   lsft      bspc <    >    =    XX   XX   del                 XX   XX 
-  XX        4    5    6    XX   lctl      ret  +    -    *    /    lsft XX   XX             XX   XX  
-  @num lsft 7    8    9    0    XX        lalt .    ,    XX   XX             XX             XX   XX    
-  @num      XX   XX        XX   XX        XX   XX                                      XX   XX   XX  
+  XX   XX   XX   XX   XX   XX   XX        XX   XX   XX   XX   XX   XX        bspc                XX  
+  XX        1    2    3    XX   lsft      rsft <    >    =    XX   XX   del                 XX   XX 
+  XX        4    5    6    XX   lctl      rctl +    -    *    /    rsft XX   ret            XX   XX  
+  @num lsft 7    8    9    XX   @nav      ralt .    ,    @pun @sym           XX             XX   XX    
+  @num      lmet lalt      spc  spc       ralt rctl                                    XX   XX   XX  
 )
 
 (deflayer symbols
   esc  f1   f2   f3   f4   f5   f6        f7   f8   f9   f10  f11  f12                             
-  XX   XX   XX   XX   XX   XX   XX        XX   XX   XX   XX   XX   XX        XX                  XX  
-  XX        esc  !    @    #    lsft      bspc [    ]    XX   XX   XX   del                 XX   XX 
-  XX        XX   $    %    ^    lctl      ret  \(   \)   XX   XX   lsft XX   XX             XX   XX  
-  XX   lsft XX   &    *    <    >         lalt {    }    XX   @sym           XX             XX   XX    
-  XX        XX   XX        XX   XX        XX   XX                                      XX   XX   XX  
+  XX   XX   XX   XX   XX   XX   XX        XX   XX   XX   XX   XX   XX        bspc                XX  
+  XX        !    @    #    XX   lsft      rsft [    ]    XX   XX   XX   del                 XX   XX 
+  XX        $    %    ^    XX   lctl      rctl \(   \)   XX   XX   rsft XX   ret            XX   XX  
+  @num lsft &    *    XX   XX   @nav      ralt {    }    @pun @sym           XX             XX   XX    
+  @num      lmet lalt      spc  spc       ralt rctl                                    XX   XX   XX  
 )
 
 
 
 (deflayer punctuation
   esc  f1   f2   f3   f4   f5   f6        f7   f8   f9   f10  f11  f12                                 
-  XX   XX   XX   XX   XX   XX   XX        XX   XX   XX   XX   XX   XX        XX                  XX  
-  XX        esc  grv  /    \    lsft      bspc XX   XX   XX   XX   XX   del                 XX   XX 
-  XX        "    ?    ,    .    lctl      ret  XX   XX   XX   XX   lsft XX   XX             XX   XX  
-  XX   lsft '    !    :    ;    XX        lalt XX   XX   @pun XX             XX             XX   XX    
-  XX        XX   XX        XX   XX        XX   XX                                      XX   XX   XX  
+  XX   XX   XX   XX   XX   XX   XX        XX   XX   XX   XX   XX   XX        bspc                XX  
+  XX        esc  grv  /    \    lsft      rsft XX   XX   XX   XX   XX   del                 XX   XX 
+  XX        !    ?    ,    .    lctl      rctl XX   XX   XX   XX   rsft XX   ret            XX   XX  
+  @num lsft '    "    :    ;    @nav      ralt XX   XX   @pun @sym           XX             XX   XX    
+  @num      lmet lalt      spc  spc       ralt rctl                                    XX   XX   XX  
 )
 
 ;; Underliying source. It is a very comfortable ergonomic keyboard, Microsoft sculpt.

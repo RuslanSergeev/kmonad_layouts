@@ -11,9 +11,8 @@ sudo kmonad [desired_layout.kbd]
 
 # Available keyboards configs:
 
-- Microsoft sculpt ergonomic split [keyboard definitions](microsoft_sculpt.kbd)
-A special characters and navigation layers are added. 
-Not deeply tested by now.
+- Microsoft sculpt ergonomic split [keyboard](microsoft_sculpt.kbd)  
+- Dell universall 100 percent [keyboard](dell_ansi_100.kbd)
 
 # Installing KMonad:
 

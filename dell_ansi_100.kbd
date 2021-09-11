@@ -1,0 +1,69 @@
+(defcfg
+  input  (device-file "/dev/input/by-id/usb-Dell_Dell_Universal_Receiver-event-kbd")
+  output (uinput-sink "kmonad_output_kb")
+)
+
+( defalias
+  nav (layer-toggle navigation)
+  sym (layer-toggle symbols)
+  pun (layer-toggle punctuation)
+  num (layer-toggle numbers)
+)
+
+;; Underliying source: dell universal 100
+(deflayer initial
+  esc  f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12        mute vold volu
+  XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   bspc  ins  home pgup  nlck kp/  kp*  kp-
+  tab  q    w    e    r    t    bspc y    u    i    o    p    del  XX    del  end  pgdn  kp7  kp8  kp9  kp+
+  lctl a    s    d    f    g    ret  h    j    k    l    rsft ret                        kp4  kp5  kp6
+  @num z    x    c    v    @nav b    n    m    @pun @sym rsft                 up         kp1  kp2  kp3  kprt
+  @num lmet lalt           spc            ralt rmet cmp  rctl            left down rght  kp0  kp.
+)
+
+(deflayer navigation
+  esc  f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12       mute vold volu
+  XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   bspc ins  home pgup  nlck kp/  kp*  kp-
+  tab  esc  XX   XX   XX   lsft rsft home pgdn pgup end  XX   del  XX   del  end  pgdn  kp7  kp8  kp9  kp+
+  lctl XX   XX   XX   XX   lctl rctl left down up   rght rsft ret                       kp4  kp5  kp6
+  @num XX   XX   XX   XX   @nav ralt XX   XX   @pun @sym rsft                up         kp1  kp2  kp3  kprt
+  @num lmet lalt           spc            ralt rmet cmp  rctl           left down rght  kp0  kp.
+)
+
+
+(deflayer punctuation
+  esc  f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12        mute vold volu
+  XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   bspc  ins  home pgup  nlck kp/  kp*  kp-
+  tab  esc  grv  /    \    lsft rsft XX   XX   XX   XX   XX   del  XX    del  end  pgdn  kp7  kp8  kp9  kp+
+  lctl !    ?    ,    .    lctl rctl XX   XX   XX   XX   rsft ret                        kp4  kp5  kp6
+  @num '    "    :    ;    @nav ralt XX   XX   @pun @sym rsft                 up         kp1  kp2  kp3  kprt
+  @num lmet lalt           spc            ralt rmet cmp  rctl            left down rght  kp0  kp.
+)
+
+(deflayer numbers
+  esc  f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12        mute vold volu
+  XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   bspc  ins  home pgup  nlck kp/  kp*  kp-
+  tab  1    2    3    XX   lsft rsft <    >    =    XX   XX   del  XX    del  end  pgdn  kp7  kp8  kp9  kp+
+  lctl 4    5    6    XX   lctl rctl +    -    *    /    rsft ret                        kp4  kp5  kp6
+  @num 7    8    9    0    @nav ralt .    ,    @pun @sym rsft                 up         kp1  kp2  kp3  kprt
+  @num lmet lalt           spc            ralt rmet cmp  rctl            left down rght  kp0  kp.
+)
+
+(deflayer symbols
+  esc  f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12        mute vold volu
+  XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   bspc  ins  home pgup  nlck kp/  kp*  kp-
+  tab  !    @    #    XX   lsft rsft [    ]    XX   XX   XX   del  XX    del  end  pgdn  kp7  kp8  kp9  kp+
+  lctl $    %    ^    XX   lctl rctl \(   \)   XX   XX   rsft ret                        kp4  kp5  kp6
+  @num &    *    <    XX   @nav ralt {    }    @pun @sym rsft                 up         kp1  kp2  kp3  kprt
+  @num lmet lalt           spc            ralt rmet cmp  rctl            left down rght  kp0  kp.
+)
+
+;; Underliying source. It is a very comfortable ergonomic keyboard, Microsoft sculpt.
+(defsrc
+  esc  f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12        mute vold volu
+  grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc  ins  home pgup  nlck kp/  kp*  kp-
+  tab  q    w    e    r    t    y    u    i    o    p    [    ]    \     del  end  pgdn  kp7  kp8  kp9  kp+
+  caps a    s    d    f    g    h    j    k    l    ;    '    ret                        kp4  kp5  kp6
+  lsft z    x    c    v    b    n    m    ,    .    /    rsft                 up         kp1  kp2  kp3  kprt
+  lctl lmet lalt           spc            ralt rmet cmp  rctl            left down rght  kp0  kp.
+)
+
