@@ -28,34 +28,36 @@
   XX   XX   XX   XX   XX   XX   XX        XX   XX   XX   XX   XX   XX        XX                  XX  
   XX        esc  XX   XX   XX   lsft      bspc home pgdn pgup end  XX   del                 XX   XX 
   XX        XX   XX   XX   XX   lctl      ret  left down up   rght lsft XX   XX             XX   XX  
-  XX   XX   XX   XX   XX   XX   @nav      lalt XX   XX   XX   XX             XX             XX   XX    
+  XX   lsft XX   XX   XX   XX   @nav      lalt XX   XX   XX   XX             XX             XX   XX    
   XX        XX   XX        XX   XX        XX   XX                                      XX   XX   XX  
 )
 
 (deflayer numbers
   esc  f1   f2   f3   f4   f5   f6        f7   f8   f9   f10  f11  f12                             
   XX   XX   XX   XX   XX   XX   XX        XX   XX   XX   XX   XX   XX        XX                  XX  
-  XX        esc  XX   XX   XX   lsft      bspc 1    2    3    XX   XX   XX                  XX   XX 
-  XX        XX   XX   XX   XX   lctl      ret  4    5    6    XX   XX   XX   XX             XX   XX  
-  XX   @num XX   XX   XX   XX   XX        lalt 7    8    9    0              XX             XX   XX    
+  XX        1    2    3    XX   lsft      bspc <    >    =    XX   XX   del                 XX   XX 
+  XX        4    5    6    XX   lctl      ret  +    -    *    /    lsft XX   XX             XX   XX  
+  @num lsft 7    8    9    0    XX        lalt .    ,    XX   XX             XX             XX   XX    
   @num      XX   XX        XX   XX        XX   XX                                      XX   XX   XX  
 )
 
 (deflayer symbols
   esc  f1   f2   f3   f4   f5   f6        f7   f8   f9   f10  f11  f12                             
   XX   XX   XX   XX   XX   XX   XX        XX   XX   XX   XX   XX   XX        XX                  XX  
-  XX        esc  !    @    #    lsft      bspc [    ]    XX   XX   XX   XX                  XX   XX 
-  XX        XX   $    %    ^    lctl      ret  \(   \)   XX   XX   XX   XX   XX             XX   XX  
-  XX   XX   XX   &    *    <    >         lalt {    }    XX   @sym           XX             XX   XX    
+  XX        esc  !    @    #    lsft      bspc [    ]    XX   XX   XX   del                 XX   XX 
+  XX        XX   $    %    ^    lctl      ret  \(   \)   XX   XX   lsft XX   XX             XX   XX  
+  XX   lsft XX   &    *    <    >         lalt {    }    XX   @sym           XX             XX   XX    
   XX        XX   XX        XX   XX        XX   XX                                      XX   XX   XX  
 )
+
+
 
 (deflayer punctuation
   esc  f1   f2   f3   f4   f5   f6        f7   f8   f9   f10  f11  f12                                 
   XX   XX   XX   XX   XX   XX   XX        XX   XX   XX   XX   XX   XX        XX                  XX  
-  XX        esc  grv  /    \    lsft      bspc XX   XX   XX   XX   XX   XX                  XX   XX 
-  XX        -    "    ,    .    lctl      ret  XX   XX   XX   XX   XX   XX   XX             XX   XX  
-  XX   XX   \_   '    :    ;    XX        lalt XX   XX   @pun XX             XX             XX   XX    
+  XX        esc  grv  /    \    lsft      bspc XX   XX   XX   XX   XX   del                 XX   XX 
+  XX        "    ?    ,    .    lctl      ret  XX   XX   XX   XX   lsft XX   XX             XX   XX  
+  XX   lsft '    !    :    ;    XX        lalt XX   XX   @pun XX             XX             XX   XX    
   XX        XX   XX        XX   XX        XX   XX                                      XX   XX   XX  
 )
 
