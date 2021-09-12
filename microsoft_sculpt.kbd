@@ -5,59 +5,68 @@
 
 ( defalias
   nav (layer-toggle navigation)
-  sym (layer-toggle symbols)
   pun (layer-toggle punctuation)
+  mat (layer-toggle mathsyms)
+  sym (layer-toggle symbols)
   num (layer-toggle numbers)
+  fnav (tap-hold 400 f @nav)
+  dpun (tap-hold 400 d @pun)
+  smat (tap-hold 400 s @mat)
+  asym (tap-hold 400 a @sym)
+  cnum (tap-hold 400 c @num)
 )
 
-;; Default layer: qwerty, shifted to one position to the right
-;; Home positions: HJKL . More effective than normal QWERTY 
-;; Right indicative finger can pres RET and BSPC
 (deflayer initial
-  esc  f1   f2   f3   f4   f5   f6        f7   f8   f9   f10  f11  f12                                
-  grv  1    2    3    4    5    6         7    8    9    0    -    =         bspc                home
-  tab       q    w    e    r    t         bspc y    u    i    o    p    del                 del  end
-  lctl      a    s    d    f    g         ret  h    j    k    l    @num XX   ret            ins  pgup
-  lsft lsft z    x    c    v    @nav      b    n    m    @pun @sym           rsft           up   pgdn  
-  XX        lmet lalt      spc  spc       ralt rctl                                    left down rght
+  esc  f1   f2   f3   f4   f5   f6        f7   f8   f9   f10  f11  f12                                 
+  XX   XX   XX   XX   XX   XX   XX        XX   XX   XX   XX   XX   XX         bspc                home
+  tab       q    w    e    r    t         bspc y    u    i    o    p     del                 del  end
+  lctl      @asym @smat @dpun @fnav g     ret  h    j    k    l    XX    ret  ret            ins  pgup
+  lsft lsft z    x    @cnum v   XX        b    n    m    XX   XX              rsft           up   pgdn  
+  XX        lmet lalt      spc  spc       ralt rctl                                     left down rght
 )
-
 
 (deflayer navigation
-  esc  f1   f2   f3   f4   f5   f6        f7   f8   f9   f10  f11  f12                             
-  XX   XX   XX   XX   XX   XX   XX        XX   XX   XX   XX   XX   XX        bspc                XX  
-  XX        esc  XX   XX   XX   lsft      rsft home pgdn pgup end  XX   del                 XX   XX 
-  lctl      XX   lalt lctl lsft lctl      rctl left down up   rght @num XX   ret            XX   XX  
-  lsft lsft XX   XX   XX   XX   @nav      ralt XX   XX   @pun @sym           rsft           XX   XX    
-  XX        lmet lalt      spc  spc       ralt rctl                                    XX   XX   XX  
+  esc  f1   f2   f3   f4   f5   f6        f7   f8   f9   f10  f11  f12                                 
+  XX   XX   XX   XX   XX   XX   XX        XX   XX   XX   XX   XX   XX         bspc           home
+  tab       esc  XX   XX   XX   lsft      rsft home pgdn pgup end  XX    del                 del  end
+  lctl      lalt lctl lsft @nav lctl      rctl left down up   rght XX    ret  ret            ins  pgup
+  lsft lsft XX   XX   XX   XX   lalt      ralt XX   XX   XX   XX              rsft           up   pgdn  
+  XX        lmet lalt      spc  spc       ralt rctl                                     left down rght
 )
 
 (deflayer numbers
-  esc  f1   f2   f3   f4   f5   f6        f7   f8   f9   f10  f11  f12                             
-  XX   XX   XX   XX   XX   XX   XX        XX   XX   XX   XX   XX   XX        bspc                XX  
-  XX        esc  1    2    3    lsft      rsft <    =    >    ~    XX   del                 XX   XX 
-  lctl      XX   4    5    6    lctl      rctl +    -    *    /    @num XX   ret            XX   XX  
-  lsft lsft 0    7    8    9    lalt      ralt .    ,    @pun @sym           rsft           XX   XX    
-  XX        lmet lalt      spc  spc       ralt rctl                                    XX   XX   XX  
-)
+  esc  f1   f2   f3   f4   f5   f6        f7   f8   f9   f10  f11  f12                                 
+  XX   XX   XX   XX   XX   XX   XX        XX   XX   XX   XX   XX   XX         bspc           home
+  tab       esc  XX   XX   XX   lsft      rsft 1    2    3    XX   XX    del                 del  end
+  lctl      XX   XX   XX   XX   lctl      rctl 4    5    6    XX   XX    ret  ret            ins  pgup
+  lsft lsft XX   XX   @num XX   lalt      ralt 7    8    9    0               rsft           up   pgdn  
+  XX        lmet lalt      spc  spc       ralt rctl                                     left down rght
+)     
 
 (deflayer symbols
-  esc  f1   f2   f3   f4   f5   f6        f7   f8   f9   f10  f11  f12                             
-  XX   XX   XX   XX   XX   XX   XX        XX   XX   XX   XX   XX   XX        bspc                XX  
-  XX        esc  !    @    #    lsft      rsft [    ]    XX   XX   XX   del                 XX   XX 
-  lctl      XX   $    %    ^    lctl      rctl \(   \)   XX   XX   @num XX   ret            XX   XX  
-  lsft lsft \)   &    *    \(   lalt      ralt {    }    @pun @rsft          XX             XX   XX    
-  XX        lmet lalt      spc  spc       ralt rctl                                    XX   XX   XX  
+  esc  f1   f2   f3   f4   f5   f6        f7   f8   f9   f10  f11  f12                              
+  XX   XX   XX   XX   XX   XX   XX        XX   XX   XX   XX   XX   XX         bspc           XX       
+  tab       esc  XX   [    ]    lsft      rsft !    @    #    XX   XX    del                 XX   XX 
+  lctl      @sym XX   \(   \)   lctl      rctl $    %    ^    XX   XX    ret  ret            XX   XX  
+  lsft lsft XX   XX   {    }    lalt      ralt &    *    \(   XX              XX             XX   XX    
+  XX        lmet lalt      spc  spc       ralt rctl                                     XX   XX   XX  
 )
-
-
 
 (deflayer punctuation
   esc  f1   f2   f3   f4   f5   f6        f7   f8   f9   f10  f11  f12                                 
   XX   XX   XX   XX   XX   XX   XX        XX   XX   XX   XX   XX   XX        bspc                XX  
-  XX        esc  \    |    /    lsft      rsft XX   XX   XX   XX   XX   del                 XX   XX 
-  lctl      ?    !    .    ,    lctl      rctl XX   XX   XX   XX   @num XX   ret            XX   XX  
-  lsft lsft '    "    ;    :    lalt      ralt `    XX   @pun @sym           rsft           XX   XX    
+  tab       esc  XX   XX   XX   lsft      rsft /    |    \    `    XX   del                 XX   XX 
+  lctl      XX   XX   @pun XX   lctl      rctl ,    .    !    ?    XX   XX   ret            XX   XX  
+  lsft lsft XX   XX   XX   XX   lalt      ralt :    ;    "    '              rsft           XX   XX    
+  XX        lmet lalt      spc  spc       ralt rctl                                    XX   XX   XX  
+)
+
+(deflayer mathsyms
+  esc  f1   f2   f3   f4   f5   f6        f7   f8   f9   f10  f11  f12                                 
+  XX   XX   XX   XX   XX   XX   XX        XX   XX   XX   XX   XX   XX        bspc                XX  
+  tab       XX   XX   XX   XX   lsft      rsft <    =    >    ~    XX   del                 XX   XX 
+  lctl      XX   @mat XX   XX   lctl      rctl +    -    *    /    XX   XX   ret            XX   XX  
+  lsft lsft XX   XX   XX   XX   lalt      ralt .    ,    \_   XX             rsft           XX   XX    
   XX        lmet lalt      spc  spc       ralt rctl                                    XX   XX   XX  
 )
 

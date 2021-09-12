@@ -5,9 +5,15 @@
 
 ( defalias
   nav (layer-toggle navigation)
-  sym (layer-toggle symbols)
   pun (layer-toggle punctuation)
+  mat (layer-toggle mathsyms)
+  sym (layer-toggle symbols)
   num (layer-toggle numbers)
+  fnav (tap-hold 400 f @nav)
+  dpun (tap-hold 400 d @pun)
+  smat (tap-hold 400 s @mat)
+  asym (tap-hold 400 a @sym)
+  cnum (tap-hold 400 c @num)
 )
 
 ;; Underliying source: dell universal 100
@@ -15,8 +21,8 @@
   esc  f1   f2   f3   f4   f5        f6   f7   f8   f9   f10  f11  f12        mute vold volu
   XX   XX   XX   XX   XX   XX        XX   XX   XX   XX   XX   XX   XX   bspc  ins  home pgup  nlck kp/  kp*  kp-
   tab  q    w    e    r    t         bspc y    u    i    o    p    del  XX    del  end  pgdn  kp7  kp8  kp9  kp+
-  lctl a    s    d    f    g         ret  h    j    k    l    @num ret                        kp4  kp5  kp6
-  lsft z    x    c    v    @nav      b    n    m    @pun @sym rsft                 up         kp1  kp2  kp3  kprt
+  lctl @asym @smat @dpun @fnav g     ret  h    j    k    l    XX   ret                        kp4  kp5  kp6
+  lsft z    x    @cnum v   XX        b    n    m    XX   XX   rsft                 up         kp1  kp2  kp3  kprt
   XX   lmet lalt           spc                 ralt rmet cmp  rctl            left down rght  kp0  kp.
 )
 
@@ -24,8 +30,8 @@
   esc  f1   f2   f3   f4   f5        f6   f7   f8   f9   f10  f11  f12       mute vold volu
   XX   XX   XX   XX   XX   XX        XX   XX   XX   XX   XX   XX   XX   bspc ins  home pgup  nlck kp/  kp*  kp-
   tab  esc  XX   XX   XX   lsft      rsft home pgdn pgup end  XX   del  XX   del  end  pgdn  kp7  kp8  kp9  kp+
-  lctl XX   lalt lctl lsft lctl      rctl left down up   rght @num ret                       kp4  kp5  kp6
-  XX   XX   XX   XX   XX   @nav      ralt XX   XX   @pun @sym rsft                up         kp1  kp2  kp3  kprt
+  lctl lalt lctl lsft @nav lctl      rctl left down up   rght XX   ret                       kp4  kp5  kp6
+  XX   XX   XX   XX   XX   lalt      ralt XX   XX   XX   XX   rsft                up         kp1  kp2  kp3  kprt
   XX   lmet lalt           spc                 ralt rmet cmp  rctl           left down rght  kp0  kp.
 )
 
@@ -33,27 +39,36 @@
 (deflayer punctuation
   esc  f1   f2   f3   f4   f5        f6   f7   f8   f9   f10  f11  f12        mute vold volu
   XX   XX   XX   XX   XX   XX        XX   XX   XX   XX   XX   XX   XX   bspc  ins  home pgup  nlck kp/  kp*  kp-
-  tab  esc  \    |    /    lsft      rsft XX   XX   XX   XX   XX   del  XX    del  end  pgdn  kp7  kp8  kp9  kp+
-  lctl ?    !    .    ,    lctl      rctl XX   XX   XX   XX   @num ret                        kp4  kp5  kp6
-  lsft '    "    ;    :    lalt      ralt `    XX   @pun @sym rsft                 up         kp1  kp2  kp3  kprt
+  tab  esc  XX   XX   XX   lsft      rsft /    |    \    `    XX   del  XX    del  end  pgdn  kp7  kp8  kp9  kp+
+  lctl XX   XX   @pun XX   lctl      rctl ,    .    !    ?    XX   ret                        kp4  kp5  kp6
+  lsft XX   XX   XX   XX   lalt      ralt :    ;    "    '    rsft                 up         kp1  kp2  kp3  kprt
+  XX   lmet lalt           spc                 ralt rmet cmp  rctl            left down rght  kp0  kp.
+)
+
+(deflayer mathsyms
+  esc  f1   f2   f3   f4   f5        f6   f7   f8   f9   f10  f11  f12        mute vold volu
+  XX   XX   XX   XX   XX   XX        XX   XX   XX   XX   XX   XX   XX   bspc  ins  home pgup  nlck kp/  kp*  kp-
+  tab  XX   XX   XX   XX   lsft      rsft <    =    >    ~    XX   del  XX    del  end  pgdn  kp7  kp8  kp9  kp+
+  lctl XX   @mat XX   XX   lctl      rctl +    -    *    /    XX   ret                        kp4  kp5  kp6
+  lsft XX   XX   XX   XX   lalt      ralt .    ,    \_   XX   rsft                 up         kp1  kp2  kp3  kprt
   XX   lmet lalt           spc                 ralt rmet cmp  rctl            left down rght  kp0  kp.
 )
 
 (deflayer numbers
   esc  f1   f2   f3   f4   f5        f6   f7   f8   f9   f10  f11  f12        mute vold volu
   XX   XX   XX   XX   XX   XX        XX   XX   XX   XX   XX   XX   XX   bspc  ins  home pgup  nlck kp/  kp*  kp-
-  tab  esc  1    2    3    lsft      rsft <    =    >    ~    XX   del  XX    del  end  pgdn  kp7  kp8  kp9  kp+
-  lctl XX   4    5    6    lctl      rctl +    -    *    /    @num ret                        kp4  kp5  kp6
-  lsft 0    7    8    9    lalt      ralt .    ,    _    @sym rsft                 up         kp1  kp2  kp3  kprt
+  tab  esc  XX   XX   XX   lsft      rsft 1    2    3    XX   XX   del  XX    del  end  pgdn  kp7  kp8  kp9  kp+
+  lctl XX   XX   XX   XX   lctl      rctl 4    5    6    XX   XX   ret                        kp4  kp5  kp6
+  lsft XX   XX   @num XX   lalt      ralt 7    8    9    0    rsft                 up         kp1  kp2  kp3  kprt
   XX   lmet lalt           spc                 ralt rmet cmp  rctl            left down rght  kp0  kp.
 )
 
 (deflayer symbols
   esc  f1   f2   f3   f4   f5        f6   f7   f8   f9   f10  f11  f12        mute vold volu
   XX   XX   XX   XX   XX   XX        XX   XX   XX   XX   XX   XX   XX   bspc  ins  home pgup  nlck kp/  kp*  kp-
-  tab  esc  !    @    #    lsft      rsft [    ]    XX   XX   XX   del  XX    del  end  pgdn  kp7  kp8  kp9  kp+
-  lctl XX   $    %    ^    lctl      rctl \(   \)   XX   XX   @num ret                        kp4  kp5  kp6
-  lsft \)   &    *    \(   lalt      ralt {    }    @pun @sym rsft                 up         kp1  kp2  kp3  kprt
+  tab  esc  XX   [    ]    lsft      rsft !    @    #    XX   XX   del  XX    del  end  pgdn  kp7  kp8  kp9  kp+
+  lctl @sym XX   \(   \)   lctl      rctl $    %    ^    XX   @num ret                        kp4  kp5  kp6
+  lsft XX   XX   {    }    lalt      ralt &    *    \(   XX  rsft                 up         kp1  kp2  kp3  kprt
   XX   lmet lalt           spc                 ralt rmet cmp  rctl            left down rght  kp0  kp.
 )
 
