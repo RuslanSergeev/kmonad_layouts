@@ -35,7 +35,7 @@
 (deflayer numbers
   esc  f1   f2   f3   f4   f5   f6        f7   f8   f9   f10  f11  f12                             
   XX   XX   XX   XX   XX   XX   XX        XX   XX   XX   XX   XX   XX        bspc                XX  
-  XX        esc  1    2    3    lsft      rsft <    >    =    XX   XX   del                 XX   XX 
+  XX        esc  1    2    3    lsft      rsft <    >    =    grv  XX   del                 XX   XX 
   lctl      XX   4    5    6    lctl      rctl +    -    *    /    @num XX   ret            XX   XX  
   lsft lsft 0    7    8    9    lalt      ralt .    ,    @pun @sym           rsft           XX   XX    
   XX        lmet lalt      spc  spc       ralt rctl                                    XX   XX   XX  
@@ -55,9 +55,9 @@
 (deflayer punctuation
   esc  f1   f2   f3   f4   f5   f6        f7   f8   f9   f10  f11  f12                                 
   XX   XX   XX   XX   XX   XX   XX        XX   XX   XX   XX   XX   XX        bspc                XX  
-  XX        esc  grv  \    /    lsft      rsft XX   XX   XX   XX   XX   del                 XX   XX 
-  lctl      ?    !    ,    .    lctl      rctl XX   XX   XX   XX   @num XX   ret            XX   XX  
-  lsft lsft '    "    :    ;    lalt      ralt XX   XX   @pun @sym           rsft           XX   XX    
+  XX        esc  \    |    /    lsft      rsft XX   XX   XX   XX   XX   del                 XX   XX 
+  lctl      ?    !    .    ,    lctl      rctl XX   XX   XX   XX   @num XX   ret            XX   XX  
+  lsft lsft '    "    ;    :    lalt      ralt XX   XX   @pun @sym           rsft           XX   XX    
   XX        lmet lalt      spc  spc       ralt rctl                                    XX   XX   XX  
 )
 

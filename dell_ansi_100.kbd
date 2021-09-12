@@ -33,18 +33,18 @@
 (deflayer punctuation
   esc  f1   f2   f3   f4   f5        f6   f7   f8   f9   f10  f11  f12        mute vold volu
   XX   XX   XX   XX   XX   XX        XX   XX   XX   XX   XX   XX   XX   bspc  ins  home pgup  nlck kp/  kp*  kp-
-  tab  esc  grv  \    /    lsft      rsft XX   XX   XX   XX   XX   del  XX    del  end  pgdn  kp7  kp8  kp9  kp+
-  lctl ?    !    ,    .    lctl      rctl XX   XX   XX   XX   @num ret                        kp4  kp5  kp6
-  lsft '    "    :    ;    lalt      ralt XX   XX   @pun @sym rsft                 up         kp1  kp2  kp3  kprt
+  tab  esc  \    |    /    lsft      rsft XX   XX   XX   XX   XX   del  XX    del  end  pgdn  kp7  kp8  kp9  kp+
+  lctl ?    !    .    ,    lctl      rctl XX   XX   XX   XX   @num ret                        kp4  kp5  kp6
+  lsft '    "    ;    :    lalt      ralt XX   XX   @pun @sym rsft                 up         kp1  kp2  kp3  kprt
   XX   lmet lalt           spc                 ralt rmet cmp  rctl            left down rght  kp0  kp.
 )
 
 (deflayer numbers
   esc  f1   f2   f3   f4   f5        f6   f7   f8   f9   f10  f11  f12        mute vold volu
   XX   XX   XX   XX   XX   XX        XX   XX   XX   XX   XX   XX   XX   bspc  ins  home pgup  nlck kp/  kp*  kp-
-  tab  esc  1    2    3    lsft      rsft <    >    =    XX   XX   del  XX    del  end  pgdn  kp7  kp8  kp9  kp+
+  tab  esc  1    2    3    lsft      rsft <    >    =    grv  XX   del  XX    del  end  pgdn  kp7  kp8  kp9  kp+
   lctl XX   4    5    6    lctl      rctl +    -    *    /    @num ret                        kp4  kp5  kp6
-  lsft 0    7    8    9    lalt      ralt .    ,    @pun @sym rsft                 up         kp1  kp2  kp3  kprt
+  lsft 0    7    8    9    lalt      ralt .    ,    _    @sym rsft                 up         kp1  kp2  kp3  kprt
   XX   lmet lalt           spc                 ralt rmet cmp  rctl            left down rght  kp0  kp.
 )
 
