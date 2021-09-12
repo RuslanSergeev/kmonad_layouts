@@ -17,9 +17,9 @@
   esc  f1   f2   f3   f4   f5   f6        f7   f8   f9   f10  f11  f12                                
   grv  1    2    3    4    5    6         7    8    9    0    -    =         bspc                home
   tab       q    w    e    r    t         bspc y    u    i    o    p    del                 del  end
-  lctl      a    s    d    f    g         ret  h    j    k    l    rsft XX   ret            ins  pgup
-  lsft lsft z    x    c    v    @num      b    n    m    @pun @sym           rsft           up   pgdn  
-  @nav      lmet lalt      spc  spc       ralt rctl                                    left down rght
+  lctl      a    s    d    f    g         ret  h    j    k    l    @num XX   ret            ins  pgup
+  lsft lsft z    x    c    v    @nav      b    n    m    @pun @sym           rsft           up   pgdn  
+  XX        lmet lalt      spc  spc       ralt rctl                                    left down rght
 )
 
 
@@ -27,27 +27,27 @@
   esc  f1   f2   f3   f4   f5   f6        f7   f8   f9   f10  f11  f12                             
   XX   XX   XX   XX   XX   XX   XX        XX   XX   XX   XX   XX   XX        bspc                XX  
   XX        esc  XX   XX   XX   lsft      rsft home pgdn pgup end  XX   del                 XX   XX 
-  lctl      XX   XX   XX   XX   lctl      rctl left down up   rght rsft XX   ret            XX   XX  
-  lsft lsft lctl lalt XX   XX   @num      ralt XX   XX   @pun @sym           XX             XX   XX    
-  @nav      lmet lalt      spc  spc       ralt rctl                                    XX   XX   XX  
+  lctl      XX   XX   XX   XX   lctl      rctl left down up   rght @num XX   ret            XX   XX  
+  lsft lsft XX   lalt lctl lsft @nav      ralt XX   XX   @pun @sym           rsft           XX   XX    
+  XX        lmet lalt      spc  spc       ralt rctl                                    XX   XX   XX  
 )
 
 (deflayer numbers
   esc  f1   f2   f3   f4   f5   f6        f7   f8   f9   f10  f11  f12                             
   XX   XX   XX   XX   XX   XX   XX        XX   XX   XX   XX   XX   XX        bspc                XX  
   XX        esc  1    2    3    lsft      rsft <    >    =    XX   XX   del                 XX   XX 
-  lctl      XX   4    5    6    lctl      rctl +    -    *    /    rsft XX   ret            XX   XX  
-  lsft lsft 0    7    8    9    @num      ralt .    ,    @pun @sym           XX             XX   XX    
-  @nav      lmet lalt      spc  spc       ralt rctl                                    XX   XX   XX  
+  lctl      XX   4    5    6    lctl      rctl +    -    *    /    @num XX   ret            XX   XX  
+  lsft lsft 0    7    8    9    lalt      ralt .    ,    @pun @sym           rsft           XX   XX    
+  XX        lmet lalt      spc  spc       ralt rctl                                    XX   XX   XX  
 )
 
 (deflayer symbols
   esc  f1   f2   f3   f4   f5   f6        f7   f8   f9   f10  f11  f12                             
   XX   XX   XX   XX   XX   XX   XX        XX   XX   XX   XX   XX   XX        bspc                XX  
   XX        esc  !    @    #    lsft      rsft [    ]    XX   XX   XX   del                 XX   XX 
-  lctl      XX   $    %    ^    lctl      rctl \(   \)   XX   XX   rsft XX   ret            XX   XX  
-  lsft lsft \)   &    *    \(   @num      ralt {    }    @pun @sym           XX             XX   XX    
-  @nav      lmet lalt      spc  spc       ralt rctl                                    XX   XX   XX  
+  lctl      XX   $    %    ^    lctl      rctl \(   \)   XX   XX   @num XX   ret            XX   XX  
+  lsft lsft \)   &    *    \(   lalt      ralt {    }    @pun @rsft         XX             XX   XX    
+  XX        lmet lalt      spc  spc       ralt rctl                                    XX   XX   XX  
 )
 
 
@@ -56,9 +56,9 @@
   esc  f1   f2   f3   f4   f5   f6        f7   f8   f9   f10  f11  f12                                 
   XX   XX   XX   XX   XX   XX   XX        XX   XX   XX   XX   XX   XX        bspc                XX  
   XX        esc  grv  \    /    lsft      rsft XX   XX   XX   XX   XX   del                 XX   XX 
-  lctl      ?    !    ,    .    lctl      rctl XX   XX   XX   XX   rsft XX   ret            XX   XX  
-  lsft lsft '    "    :    ;    @num      ralt XX   XX   @pun @sym           XX             XX   XX    
-  @nav      lmet lalt      spc  spc       ralt rctl                                    XX   XX   XX  
+  lctl      ?    !    ,    .    lctl      rctl XX   XX   XX   XX   @num XX   ret            XX   XX  
+  lsft lsft '    "    :    ;    lalt      ralt XX   XX   @pun @sym           rsft           XX   XX    
+  XX        lmet lalt      spc  spc       ralt rctl                                    XX   XX   XX  
 )
 
 ;; Underliying source. It is a very comfortable ergonomic keyboard, Microsoft sculpt.
