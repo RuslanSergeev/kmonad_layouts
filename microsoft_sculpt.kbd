@@ -9,11 +9,11 @@
   mat (layer-toggle mathsyms)
   sym (layer-toggle symbols)
   num (layer-toggle numbers)
-  fnav (tap-hold 400 f @nav)
-  dpun (tap-hold 400 d @pun)
-  smat (tap-hold 400 s @mat)
-  asym (tap-hold 400 a @sym)
-  cnum (tap-hold 400 c @num)
+  fnav (tap-hold 280 f @nav)
+  dpun (tap-hold 280 d @pun)
+  smat (tap-hold 280 s @mat)
+  asym (tap-hold 280 a @sym)
+  cnum (tap-hold 280 c @num)
 )
 
 (deflayer initial
