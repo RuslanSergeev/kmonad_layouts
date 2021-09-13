@@ -6,7 +6,7 @@ to be used with the KMonad service.
 
 You can also try to execute just once:
 ```shell
-sudo kmonad [desired_layout.kbd]
+source monad.sh [desired_layout.kbd]
 ```
 
 # Available keyboards configs:
