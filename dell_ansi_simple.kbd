@@ -1,0 +1,66 @@
+(defcfg
+  input  (device-file "/dev/input/by-id/usb-Dell_Dell_Universal_Receiver-event-kbd")
+  output (uinput-sink "kmonad_output_kb")
+)
+
+( defalias
+  nav (layer-switch navigation)
+  fnav (layer-next  navigation)
+  num (layer-switch numbers)
+  fnum (layer-next  numbers)
+  sym (layer-switch symbols)
+  fsym (layer-next  symbols)
+  ini (layer-switch initial)
+  fini (layer-next initial)
+)
+
+;; Underliying source: dell universal 100
+(deflayer initial
+  esc  f1   f2   f3   f4   f5        f6   f7   f8   f9   f10  f11  f12        mute vold volu
+  XX   esc  XX   XX   XX   XX        XX   XX   XX   XX   XX   XX   XX   bspc  ins  home pgup  nlck kp/  kp*  kp-
+  tab  q    w    e    r    t         bspc y    u    i    o    p    del  XX    del  end  pgdn  kp7  kp8  kp9  kp+
+  lctl a    s    d    f    g         ret  h    j    k    l    rctl ret                        kp4  kp5  kp6
+  lsft z    x    c    v    @nav      b    n    m    @fsym @fnum rsft               up         kp1  kp2  kp3  kprt
+  XX   lmet lalt           spc                 ralt rmet cmp  rctl            left down rght  kp0  kp.
+)
+
+;; symbols layer combined
+(deflayer symbols
+  esc  f1   f2   f3   f4   f5        f6   f7   f8   f9   f10  f11  f12        mute vold volu
+  XX   esc  XX   XX   XX   XX        XX   XX   XX   XX   XX   XX   XX   bspc  ins  home pgup  nlck kp/  kp*  kp-
+  tab  ~    <    =    >    [         ]    /    |    \    `    XX   del  XX    del  end  pgdn  kp7  kp8  kp9  kp+
+  lctl /    *    -    +    \(        \)   ,    .    !    ?    rctl ret                        kp4  kp5  kp6
+  lsft \_    ,    .    {   @nav      }    ;    '    @sym @fnum rsft                up         kp1  kp2  kp3  kprt
+  XX   lmet lalt           @ini                ralt rmet cmp  rctl            left down rght  kp0  kp.
+)
+
+;; numbers layer
+(deflayer numbers
+  esc  f1   f2   f3   f4   f5        f6   f7   f8   f9   f10  f11  f12        mute vold volu
+  XX   esc  XX   XX   XX   XX        XX   XX   XX   XX   XX   XX   XX   bspc  ins  home pgup  nlck kp/  kp*  kp-
+  tab  XX   XX   XX   lalt XX        bspc 1    2    3    4    XX   del  XX    del  end  pgdn  kp7  kp8  kp9  kp+
+  lctl XX   XX   XX   lctl XX        ret  5    6    7    8    rctl ret                        kp4  kp5  kp6
+  lsft XX   XX   XX   lsft @nav      XX   9    0    @fsym @num rsft                up         kp1  kp2  kp3  kprt
+  XX   lmet lalt           @ini                ralt rmet cmp  rctl            left down rght  kp0  kp.
+)
+
+;; navigation layer
+(deflayer navigation
+  esc  f1   f2   f3   f4   f5        f6   f7   f8   f9   f10  f11  f12       mute vold volu
+  XX   esc  XX   XX   XX   XX        XX   XX   XX   XX   XX   XX   XX   bspc ins  home pgup  nlck kp/  kp*  kp-
+  tab  XX   XX   XX   lalt XX        bspc home pgdn pgup end  XX   del  XX   del  end  pgdn  kp7  kp8  kp9  kp+
+  lctl XX   XX   XX   lctl XX        ret  left down up   rght XX   ret                       kp4  kp5  kp6
+  lsft XX   XX   XX   lsft @nav      XX   XX   XX   @fsym @fnum rsft              up         kp1  kp2  kp3  kprt
+  XX   lmet lalt           @ini                ralt rmet cmp  rctl           left down rght  kp0  kp.
+)
+
+;; Underliying source. It is a very comfortable ergonomic keyboard, Microsoft sculpt.
+(defsrc
+  esc  f1   f2   f3   f4   f5        f6   f7   f8   f9   f10  f11  f12        mute vold volu
+  grv  1    2    3    4    5         6    7    8    9    0    -    =    bspc  ins  home pgup  nlck kp/  kp*  kp-
+  tab  q    w    e    r    t         y    u    i    o    p    [    ]    \     del  end  pgdn  kp7  kp8  kp9  kp+
+  caps a    s    d    f    g         h    j    k    l    ;    '    ret                        kp4  kp5  kp6
+  lsft z    x    c    v    b         n    m    ,    .    /    rsft                 up         kp1  kp2  kp3  kprt
+  lctl lmet lalt           spc                 ralt rmet cmp  rctl            left down rght  kp0  kp.
+)
+
