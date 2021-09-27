@@ -19,7 +19,7 @@
   esc  f1   f2   f3   f4   f5        f6   f7   f8   f9   f10  f11  f12        mute vold volu
   XX   esc  XX   XX   XX   XX        XX   XX   XX   XX   XX   XX   XX   bspc  ins  home pgup  nlck kp/  kp*  kp-
   tab  q    w    e    r    t         bspc y    u    i    o    p    del  XX    del  end  pgdn  kp7  kp8  kp9  kp+
-  lctl a    s    d    f    g         ret  h    j    k    l    @ini ret                        kp4  kp5  kp6
+  lctl a    s    d    f    g         ret  h    j    k    l    @nav ret                        kp4  kp5  kp6
   lsft z    x    c    v    @nav      b    n    m    @sym @num rsft               up         kp1  kp2  kp3  kprt
   XX   lmet lalt           spc                 ralt rmet cmp  rctl            left down rght  kp0  kp.
 )
