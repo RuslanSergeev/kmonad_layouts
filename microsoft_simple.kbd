@@ -10,7 +10,7 @@
   fnav (tap-hold-next-release 500 f @nav)
   vnav (tap-hold 280 v @nav)
   ssym (tap-hold 280 spc @sym)
-  cnum (tap-hold 280 c @num)
+  vnum (tap-hold 280 v @num)
 )
 
 (deflayer initial
@@ -18,7 +18,7 @@
   XX   XX   XX   XX   XX   XX   XX        XX   XX   XX   XX   XX   XX         bspc                home
   tab       q    w    e    r    t         bspc y    u    i    o    p     del                 del  end
   lctl      a    s    d    @fnav g        ret  h    j    k    l    XX    ret  ret            ins  pgup
-  lsft lsft z    x   @cnum v    XX        b    n    m    XX   XX              rsft           up   pgdn  
+  lsft lsft z    x    c    @vnum XX       b    n    m    XX   XX              rsft           up   pgdn  
   XX        lmet lalt      @ssym   @ssym    ralt rctl                                      left down rght
 )
 
@@ -36,7 +36,7 @@
   XX   XX   XX   XX   XX   XX   XX        XX   XX   XX   XX   XX   XX         bspc           home
   tab       esc  XX   XX   XX   XX        XX   1    2    3    XX   XX    del                 del  end
   lctl      lalt lctl lsft XX   XX        XX   4    5    6    XX   XX    ret  ret            ins  pgup
-  lsft lsft XX   XX   @num XX   XX        XX   7    8    9    0               rsft           up   pgdn  
+  lsft lsft XX   XX   XX   @num XX        XX   7    8    9    0               rsft           up   pgdn  
   XX        lmet lalt      @ssym  @ssym     ralt rctl                                     left down rght
 )     
 
@@ -45,7 +45,7 @@
   XX   XX   XX   XX   XX   XX   XX        XX   XX   XX   XX   XX   XX         bspc           XX       
   tab       esc  <    =    >    [         ]    /   |    \    `    XX    del                  XX   XX 
   lctl      /    *    -    +   \(        \)    ,   .    !    ?    XX    ret   ret            XX   XX  
-  lsft lsft XX   ~    _    {    XX        }    :   ;    "    '                XX             XX   XX    
+  lsft lsft XX   ~    \_   {    XX        }    :   ;    "    '                XX             XX   XX    
   XX        lmet lalt      @sym  @sym      ralt rctl                                     XX   XX   XX  
 )
 
