@@ -1,0 +1,81 @@
+(defcfg
+  input  (device-file "/dev/input/by-id/usb-Microsoft_Microsoft®_2.4GHz_Transceiver_v9.0-event-kbd")
+  output (uinput-sink "kmonad_output_kb")
+)
+
+( defalias
+  nav (layer-toggle navigation)
+  sym (layer-toggle symbols)
+  num (layer-toggle numbers)
+  ssm (layer-toggle specsyms)
+  fnav (tap-hold 280 f   @nav)
+  ssym (tap-hold 280 spc @sym)
+  vnum (tap-hold 280 v   @num)
+  csm  (tap-hold 280 c   @ssm)
+  zst  (tap-hold 280 z   lsft)
+)
+
+(deflayer initial
+  esc  f1   f2   f3   f4   f5   f6        f7   f8   f9   f10  f11  f12                                 
+  XX   XX   XX   XX   XX   XX   XX        XX   XX   XX   XX   XX   XX         bspc         home
+  tab       q    w    e    r    t         bspc y    u    i    o    p     del               del  end
+  lctl      a    s    d    @fnav g        ret  h    j    k    l    ;     '    ret          ins  pgup
+  lsft lsft @zst x    @csm @vnum XX       b    n    m    ,    .               rsft         up   pgdn  
+  XX        lmet lalt      @ssym   @ssym    ralt rctl                                      left down rght
+)
+
+(deflayer navigation
+  esc  f1   f2   f3   f4   f5   f6        f7   f8   f9   f10  f11  f12                                 
+  XX   XX   XX   XX   XX   XX   XX        XX   XX   XX   XX   XX   XX         bspc           home
+  tab       esc  XX   XX   XX   XX        XX   home pgdn pgup end  XX    del                 del  end
+  lctl      lalt lctl lsft @nav  XX       XX   left down up   rght XX    ret  ret            ins  pgup
+  lsft lsft XX   XX   @csm @vnum XX        XX   XX   XX   XX   XX              rsft           up   pgdn  
+  XX        lmet lalt      @ssym  @ssym     ralt rctl                                     left down rght
+)
+
+(deflayer numbers
+  esc  f1   f2   f3   f4   f5   f6        f7   f8   f9   f10  f11  f12                                 
+  XX   XX   XX   XX   XX   XX   XX        XX   XX   XX   XX   XX   XX         bspc           home
+  tab       esc  XX   XX   XX   XX        XX   1    2    3    XX   XX    del                 del  end
+  lctl      lalt lctl lsft @fnav XX       XX   4    5    6    XX   XX    ret  ret            ins  pgup
+  lsft lsft XX   XX   @csm @num XX        XX   7    8    9    0               rsft           up   pgdn  
+  XX        lmet lalt      @ssym  @ssym     ralt rctl                                     left down rght
+)     
+
+(deflayer specsyms 
+  esc  f1   f2   f3   f4   f5   f6        f7   f8   f9   f10  f11  f12                                 
+  XX   XX   XX   XX   XX   XX   XX        XX   XX   XX   XX   XX   XX         bspc           home
+  tab       esc  XX   XX   XX   XX        XX   !    @    #    XX   XX    del                 del  end
+  lctl      lalt lctl lsft @fnav XX       XX   $    %    ^    XX   XX    ret  ret            ins  pgup
+  lsft lsft XX   XX   @ssm @num XX        XX   &    *    \(   \)              rsft           up   pgdn  
+  XX        lmet lalt      @ssym  @ssym     ralt rctl                                   left down rght
+)
+
+(deflayer symbols
+  esc  f1   f2   f3   f4   f5   f6        f7   f8   f9   f10  f11  f12                              
+  XX   XX   XX   XX   XX   XX   XX        XX   XX   XX   XX   XX   XX         bspc           XX       
+  tab       ~    <   =     >    [         ]    !    @    #    `    XX    del                 XX   XX 
+  lctl      /    *    -    +    \(       \)    $    %    ^    ?    XX    ret  ret            XX   XX  
+  lsft lsft /    |    \    {    XX        }    &    *    XX   XX              XX             XX   XX    
+  XX        lmet lalt      @sym  @sym      ralt rctl                                    XX   XX   XX  
+)
+
+(deflayer symbols
+  esc  f1   f2   f3   f4   f5   f6        f7   f8   f9   f10  f11  f12                              
+  XX   XX   XX   XX   XX   XX   XX        XX   XX   XX   XX   XX   XX         bspc           XX       
+  tab       esc  <    =    >    [         ]    /   |    \    `    XX    del                  XX   XX 
+  lctl      /    *    -    +   \(        \)    ,   .    !    ?    XX    ret   ret            XX   XX  
+  lsft lsft XX   ~    \_   {    XX        }    :   ;    "    '                XX             XX   XX    
+  XX        lmet lalt      @sym  @sym      ralt rctl                                    XX   XX   XX  
+)
+
+
+;; Underliying source. It is a very comfortable ergonomic keyboard, Microsoft sculpt.
+(defsrc
+  esc  f1   f2   f3   f4   f5   f6        f7   f8   f9   f10  f11  f12                               
+  grv  1    2    3    4    5    6         7    8    9    0    -    =         bspc                home
+  tab       q    w    e    r    t         y    u    i    o    p    [    ]                   del  end
+  caps      a    s    d    f    g         h    j    k    l    ;    '    \    ret            ins  pgup
+  lsft 102d z    x    c    v    b         n    m    ,    .    /              rsft           up   pgdn  
+  lctl      lmet lalt      spc  spc       ralt rctl                                    left down rght
+)
