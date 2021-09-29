@@ -42,33 +42,16 @@
   XX        lmet lalt      @ssym  @ssym     ralt rctl                                     left down rght
 )     
 
-(deflayer specsyms 
-  esc  f1   f2   f3   f4   f5   f6        f7   f8   f9   f10  f11  f12                                 
-  XX   XX   XX   XX   XX   XX   XX        XX   XX   XX   XX   XX   XX         bspc           home
-  tab       esc  XX   XX   XX   XX        XX   !    @    #    XX   XX    del                 del  end
-  lctl      lalt lctl lsft @fnav XX       XX   $    %    ^    XX   XX    ret  ret            ins  pgup
-  lsft lsft XX   XX   @ssm @num XX        XX   &    *    \(   \)              rsft           up   pgdn  
-  XX        lmet lalt      @ssym  @ssym     ralt rctl                                   left down rght
-)
-
 (deflayer symbols
   esc  f1   f2   f3   f4   f5   f6        f7   f8   f9   f10  f11  f12                              
   XX   XX   XX   XX   XX   XX   XX        XX   XX   XX   XX   XX   XX         bspc           XX       
-  tab       ~    <   =     >    [         ]    !    @    #    `    XX    del                 XX   XX 
-  lctl      /    *    -    +    \(       \)    $    %    ^    ?    XX    ret  ret            XX   XX  
-  lsft lsft /    |    \    {    XX        }    &    *    XX   XX              XX             XX   XX    
+  tab       ~    \    |    /    [         ]    !    @    #     `   XX    del                 XX   XX 
+  lctl      _    *    -    +    \(       \)    $    %    ^    XX   XX    ret  ret            XX   XX  
+  lsft lsft <    =    >    {    XX        }    &    ?    XX   XX              XX             XX   XX    
   XX        lmet lalt      @sym  @sym      ralt rctl                                    XX   XX   XX  
 )
 
-(deflayer symbols
-  esc  f1   f2   f3   f4   f5   f6        f7   f8   f9   f10  f11  f12                              
-  XX   XX   XX   XX   XX   XX   XX        XX   XX   XX   XX   XX   XX         bspc           XX       
-  tab       esc  <    =    >    [         ]    /   |    \    `    XX    del                  XX   XX 
-  lctl      /    *    -    +   \(        \)    ,   .    !    ?    XX    ret   ret            XX   XX  
-  lsft lsft XX   ~    \_   {    XX        }    :   ;    "    '                XX             XX   XX    
-  XX        lmet lalt      @sym  @sym      ralt rctl                                    XX   XX   XX  
-)
-
+  
 
 ;; Underliying source. It is a very comfortable ergonomic keyboard, Microsoft sculpt.
 (defsrc
