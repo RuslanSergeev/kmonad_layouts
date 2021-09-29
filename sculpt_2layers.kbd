@@ -7,11 +7,9 @@
   nav (layer-toggle navigation)
   sym (layer-toggle symbols)
   num (layer-toggle numbers)
-  ssm (layer-toggle specsyms)
   fnav (tap-hold 280 f   @nav)
   ssym (tap-hold 280 spc @sym)
   vnum (tap-hold 280 v   @num)
-  csm  (tap-hold 280 c   @ssm)
   zst  (tap-hold 280 z   lsft)
 )
 
@@ -20,7 +18,7 @@
   XX   XX   XX   XX   XX   XX   XX        XX   XX   XX   XX   XX   XX         bspc         home
   tab       q    w    e    r    t         bspc y    u    i    o    p     del               del  end
   lctl      a    s    d    @fnav g        ret  h    j    k    l    ;     '    ret          ins  pgup
-  lsft lsft @zst x    @csm @vnum XX       b    n    m    ,    .               rsft         up   pgdn  
+  lsft lsft @zst x    c    @vnum XX       b    n    m    ,    .               /            up   pgdn  
   XX        lmet lalt      @ssym   @ssym    ralt rctl                                      left down rght
 )
 
@@ -29,7 +27,7 @@
   XX   XX   XX   XX   XX   XX   XX        XX   XX   XX   XX   XX   XX         bspc           home
   tab       esc  XX   XX   XX   XX        XX   home pgdn pgup end  XX    del                 del  end
   lctl      lalt lctl lsft @nav  XX       XX   left down up   rght XX    ret  ret            ins  pgup
-  lsft lsft XX   XX   @csm @vnum XX        XX   XX   XX   XX   XX              rsft           up   pgdn  
+  lsft lsft XX   XX   c    @vnum XX        XX   XX   XX   XX   XX             rsft           up   pgdn  
   XX        lmet lalt      @ssym  @ssym     ralt rctl                                     left down rght
 )
 
@@ -38,7 +36,7 @@
   XX   XX   XX   XX   XX   XX   XX        XX   XX   XX   XX   XX   XX         bspc           home
   tab       esc  XX   XX   XX   XX        XX   1    2    3    XX   XX    del                 del  end
   lctl      lalt lctl lsft @fnav XX       XX   4    5    6    XX   XX    ret  ret            ins  pgup
-  lsft lsft XX   XX   @csm @num XX        XX   7    8    9    0               rsft           up   pgdn  
+  lsft lsft XX   XX   c    @num XX        XX   7    8    9    0               rsft           up   pgdn  
   XX        lmet lalt      @ssym  @ssym     ralt rctl                                     left down rght
 )     
 

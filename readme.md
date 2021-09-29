@@ -11,8 +11,10 @@ source monad.sh [desired_layout.kbd]
 
 # Available keyboards configs:
 
-- Microsoft sculpt ergonomic split [keyboard](microsoft_sculpt.kbd)  
+- Microsoft sculpt ergonomic split [keyboard](sculpt.kbd)  
 - Dell universall 100 percent [keyboard](dell_ansi_100.kbd)
+- sculpt 2 layers simplified layout [keyboard](sculpt_2layers.kbd)
+- asus 2 layers simplified layout [keyboard](asus_2layers.kbd)
 
 # Installing KMonad:
 
