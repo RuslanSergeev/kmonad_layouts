@@ -43,9 +43,9 @@
 (deflayer symbols
   esc  f1   f2   f3   f4    f5      f6    f7   f8   f9   f10    f11  f12  XX XX XX                               
   XX   XX   XX   XX   XX    XX      XX    XX   XX   XX   XX     XX   XX   XX  
-  tab  ~    \    |    /     [       ]     !    @    #    `      XX   XX   XX            
+  tab  ~    <    =    >     [       ]     !    @    #    `      XX   XX   XX            
   lctl \_   *    -    +     \(      \)    $    %    ^    XX     XX        XX         
-  lsft <    =    >    {     XX      }     &    *    XX   XX               XX             up   
+  lsft \    |    /    {     XX      }     &    *    XX   XX               XX             up   
   XX        lmet lalt         @sym        ralt  rctl                                left down right
 )
 
