@@ -14,7 +14,7 @@
 )
 
 (deflayer initial
-  esc  f1   f2   f3   f4   f5       f6    f7   f8   f9   f10  f11  f12   XX XX XX                               
+  esc  f1   f2   f3   f4   f5       f6    f7   f8   f9   f10  f11  f12   pause ssrq del                               
   XX   XX   XX   XX   XX   XX       XX    XX   XX   XX   XX   XX    XX   XX 
   tab  q    w    e    r     t       bspc  y    u    i    o    p     del  XX            
   lctl a    s    d    @fnav g       ret   h    j    k    l    ;          '         
