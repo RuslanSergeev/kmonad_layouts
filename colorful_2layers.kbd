@@ -14,48 +14,48 @@
 )
 
 (deflayer initial
-  esc  f1   f2   f3   f4   f5    f6        f7   f8   f9   f10  f11   f12  ssrq slck del      home end pgup pgdn
-  ~    1    2    3    4    5     6         7    8    9    0    -    =    bspc                nlck kp/ kp* kp-
-  tab       q    w    e    r     t         bspc y    u    i    o    p     \    |             kp7  kp8 kp9 kp+
-  lctl      a    s    d    @fnav g         ret  h    j    k    l    ;         ret            kp4  kp5 kp6    
-  lsft      @zst x    c    @vnum XX        b    n    m    ,    .    '         up             kp1  kp2 kp3 kprt
-  caps      lmet lalt @ssym                          ralt KeyMenu   rctl left down right         kp0 kp.
+  esc  f1   f2   f3   f4   f5    f6    f7   f8   f9   f10  f11   f12  ssrq slck del      home end pgup pgdn
+  ~    1    2    3    4    5     6     7    8    9    0    -    =    bspc                nlck kp/ kp* kp-
+  tab       q    w    e    r     t     bspc y    u    i    o    p    del   |             kp7  kp8 kp9 kp+
+  lctl      a    s    d    @fnav g     ret  h    j    k    l    ;          '             kp4  kp5 kp6    
+  lsft      @zst x    c    @vnum XX    b    n    m    ,    .    '         up             kp1  kp2 kp3 kprt
+  caps      lmet lalt @ssym                      ralt KeyMenu   rctl left down right         kp0 kp.
 )
 
 (deflayer navigation
-  esc  f1   f2   f3   f4   f5   f6        f7   f8   f9   f10  f11   f12  ssrq slck del      home end pgup pgdn
-  XX   XX   XX   XX   XX   XX   XX        XX   XX   XX   XX   XX    XX   XX                 XX   XX  XX   XX
-  tab       esc  XX   XX   XX   XX        XX   home pgdn pgup end   XX   XX   XX            kp7  kp8 kp9 kp+
-  lctl      lalt lctl lsft XX   XX        XX   left down up   right XX        ret           kp4  kp5 kp6    
-  lsft      XX   XX   XX   XX   XX        XX   XX   XX   XX   XX    XX        up            kp1  kp2 kp3 kprt
-  caps      lmet lalt spc                           ralt KeyMenu    rctl left down right         kp0 kp.
+  esc  f1   f2   f3   f4   f5   f6    f7   f8   f9   f10  f11   f12  ssrq slck del      home end pgup pgdn
+  XX   XX   XX   XX   XX   XX   XX    XX   XX   XX   XX   XX    XX   XX                 XX   XX  XX   XX
+  tab       esc  XX   XX   XX   XX    XX   home pgdn pgup end   XX   XX   XX            kp7  kp8 kp9 kp+
+  lctl      lalt lctl lsft XX   XX    XX   left down up   right XX        ret           kp4  kp5 kp6    
+  lsft      XX   XX   XX   XX   XX    XX   XX   XX   XX   XX    XX        up            kp1  kp2 kp3 kprt
+  caps      lmet lalt spc                       ralt KeyMenu    rctl left down right         kp0 kp.
 )
 
 (deflayer numbers
-  esc  f1   f2   f3   f4   f5   f6        f7   f8   f9   f10  f11   f12  ssrq slck del      home end pgup pgdn
-  XX   XX   XX   XX   XX   XX   XX        XX   XX   XX   XX   XX    XX   XX                 XX   XX  XX   XX
-  tab       esc  XX   XX   XX   XX        XX   1    2    3    XX    XX   XX   XX            kp7  kp8 kp9 kp+
-  lctl      lalt lctl lsft XX   XX        XX   4    5    6    XX    XX        ret           kp4  kp5 kp6    
-  lsft      XX   XX   XX   XX   XX        XX   7    8    9    0     XX        up            kp1  kp2 kp3 kprt
-  caps      lmet lalt spc                           ralt KeyMenu    rctl left down right         kp0 kp.
+  esc  f1   f2   f3   f4   f5   f6    f7   f8   f9   f10  f11   f12  ssrq slck del      home end pgup pgdn
+  XX   XX   XX   XX   XX   XX   XX    XX   XX   XX   XX   XX    XX   XX                 XX   XX  XX   XX
+  tab       esc  XX   XX   XX   XX    XX   1    2    3    XX    XX   XX   XX            kp7  kp8 kp9 kp+
+  lctl      lalt lctl lsft XX   XX    XX   4    5    6    XX    XX        ret           kp4  kp5 kp6    
+  lsft      XX   XX   XX   XX   XX    XX   7    8    9    0     XX        up            kp1  kp2 kp3 kprt
+  caps      lmet lalt spc                       ralt KeyMenu    rctl left down right         kp0 kp.
 )
 
 (deflayer symbols
-  esc  f1   f2   f3   f4   f5   f6        f7   f8   f9   f10  f11   f12  ssrq slck del      home end pgup pgdn
-  XX   XX   XX   XX   XX   XX   XX        XX   XX   XX   XX   XX    XX   XX                 XX   XX  XX   XX
-  tab       ~    <    =    >    [         ]    !    @    #    end   XX   XX   XX            kp7  kp8 kp9 kp+
-  lctl      \_   *    -    +    \(        \)   $    %    ^    XX    XX        ret           kp4  kp5 kp6    
-  lsft      \    |    /    {    XX        }    &    *    XX   ?     XX        up            kp1  kp2 kp3 kprt
-  caps      lmet lalt spc                           ralt KeyMenu    rctl left down right         kp0 kp.
+  esc  f1   f2   f3   f4   f5   f6    f7   f8   f9   f10  f11   f12  ssrq slck del      home end pgup pgdn
+  XX   XX   XX   XX   XX   XX   XX    XX   XX   XX   XX   XX    XX   XX                 XX   XX  XX   XX
+  tab       ~    <    =    >    [     ]    !    @    #    `     XX   XX   XX            kp7  kp8 kp9 kp+
+  lctl      \_   *    -    +    \(    \)   $    %    ^    ~     XX        ret           kp4  kp5 kp6    
+  lsft      \    |    /    {    XX    }    &    *    XX   ?     XX        up            kp1  kp2 kp3 kprt
+  caps      lmet lalt spc                       ralt KeyMenu    rctl left down right         kp0 kp.
 )
 
-;; Underlying source. Colorful notebook keyboard.
+;; Underlying source. Colorful noteboeyboard.
 (defsrc
-  esc  f1   f2   f3   f4   f5   f6        f7   f8   f9   f10  f11   f12  ssrq slck del      home end pgup pgdn
-  grv  1    2    3    4    5    6         7    8    9    0    -     =    bspc               nlck kp/ kp* kp-
-  tab       q    w    e    r    t         y    u    i    o    p     [    ]    \             kp7  kp8 kp9 kp+
-  caps      a    s    d    f    g         h    j    k    l    ;     '         ret           kp4  kp5 kp6    
-  lsft      z    x    c    v    b         n    m    ,    .    /     rsft      up            kp1  kp2 kp3 kprt
-  lctl      lmet lalt spc                           ralt KeyMenu    rctl left down right         kp0 kp.
+  esc  f1   f2   f3   f4   f5   f6    f7   f8   f9   f10  f11   f12  ssrq slck del      home end pgup pgdn
+  grv  1    2    3    4    5    6     7    8    9    0    -     =    bspc               nlck kp/ kp* kp-
+  tab       q    w    e    r    t     y    u    i    o    p     [    ]    \             kp7  kp8 kp9 kp+
+  caps      a    s    d    f    g     h    j    k    l    ;     '         ret           kp4  kp5 kp6    
+  lsft      z    x    c    v    b     n    m    ,    .    /     rsft      up            kp1  kp2 kp3 kprt
+  lctl      lmet lalt spc                       ralt KeyMenu    rctl left down right         kp0 kp.
 )
 
